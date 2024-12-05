@@ -18,8 +18,8 @@ For full license text, see the LICENSE file in the repo root or https://opensour
   <a href="https://github.com/DatadudeDev/logmatic/actions/workflows/docker-image.yml">
     <img alt="Docker Image CI" src="https://github.com/DatadudeDev/logmatic/actions/workflows/docker-image.yml/badge.svg?branch=main" />
   </a>
-  <a href="https://github.com/datadudedev/logmatic/releases">
-    <img alt="Latest Release" src="https://img.shields.io/github/release/datadudedev/logmatic.svg" />
+  <a href="https://github.com/datadudedev/logmatic/releases/tag/1.0">
+    <img alt="Latest Release" src="https://img.shields.io/badge/release-v1.0-blue">
   </a>
   <a href="https://badge.fury.io/py/Logmatic">
     <img src="https://badge.fury.io/py/Logmatic.svg" alt="PyPI version">
