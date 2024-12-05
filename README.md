@@ -13,49 +13,49 @@ For full license text, see the LICENSE file in the repo root or https://opensour
 </p>
 
 <div align="center">
-  <a href="https://github.com/datadudedev/logai/actions/workflows/tests.yml">
-    <img alt="Latest Release" src="https://github.com/salesforce/logai/actions/workflows/tests.yml/badge.svg?branch=main" />
+  <a href="https://github.com/datadudedev/logmatic/actions/workflows/tests.yml">
+    <img alt="Latest Release" src="https://github.com/salesforce/logmatic/actions/workflows/tests.yml/badge.svg?branch=main" />
   </a>
-  <a href="https://github.com/datadudedev/logai/actions/workflows/pages/pages-build-deployment">
-    <img alt="pages-build-deployment" src="https://github.com/salesforce/logai/actions/workflows/pages/pages-build-deployment/badge.svg" />
+  <a href="https://github.com/datadudedev/logmatic/actions/workflows/pages/pages-build-deployment">
+    <img alt="pages-build-deployment" src="https://github.com/salesforce/logmatic/actions/workflows/pages/pages-build-deployment/badge.svg" />
   </a>
-  <a href="https://github.com/datadudedev/logai/releases">
-    <img alt="Latest Release" src="https://img.shields.io/github/release/salesforce/logai.svg" />
+  <a href="https://github.com/datadudedev/logmatic/releases">
+    <img alt="Latest Release" src="https://img.shields.io/github/release/salesforce/logmatic.svg" />
   </a>
-  <a href="https://badge.fury.io/py/logai">
-    <img src="https://badge.fury.io/py/logai.svg" alt="PyPI version">
+  <a href="https://badge.fury.io/py/logmatic">
+    <img src="https://badge.fury.io/py/logmatic.svg" alt="PyPI version">
   </a>
   <a href="https://opensource.org/licenses/BSD-3-Clause">
     <img alt="license" src="https://img.shields.io/badge/License-BSD_3--Clause-blue.svg"/>
   </a>
 </div>
 
-# LogAI: A Library for Log Analytics and Intelligence
+# Logmatic: A Library for Log Analytics and Intelligence
 
 ## Table of Contents
 * [Introduction](#introduction)
 * [Installation](#installation)
 * [Getting Started](#getting-started)
-  * [Explore LogAI GUI Portal](#explore-logai-gui-portal)
+  * [Explore logmatic GUI Portal](#explore-logmatic-gui-portal)
   * [Run Simple Time-series Anomaly Detection Application](#run-simple-time-series-anomaly-detection-application)
-  * [Build Customized LogAI Applications](#build-customized-logai-applications)
+  * [Build Customized logmatic Applications](#build-customized-logmatic-applications)
   * [Deep-learning Anomaly Detection Benchmarking](#deep-learning-anomaly-detection-benchmarking)
 * [Documentation](#documentation)
-* [Technical Report and Citing LogAI](#technical-report-and-citing-logai)
+* [Technical Report and Citing logmatic](#technical-report-and-citing-logmatic)
 * [Contact](#contact)
 * [License](#license)
 
 ## Introduction
-LogAI is a one-stop open source library for log analytics and intelligence. LogAI supports various log analytics and log intelligence tasks such as log summarization, log clustering, log anomaly detection and more. It adopts the OpenTelemetry data model, to enable compatibility with different log management platforms. LogAI provides a unified model interface and integrates popular time-series, statistical learning and deep 
-learning models. Alongside this, LogAI also provides an out-of-the-box GUI toolkit for users to conduct interactive log 
-analysis. With LogAI, we can also easily benchmark popular ML and deep-learning algorithms for log anomaly detection 
-without putting in redundant effort to process the logs. We have opensourced LogAI to facilitate a wide range of 
+logmatic is a one-stop open source library for log analytics and intelligence. logmatic supports various log analytics and log intelligence tasks such as log summarization, log clustering, log anomaly detection and more. It adopts the OpenTelemetry data model, to enable compatibility with different log management platforms. logmatic provides a unified model interface and integrates popular time-series, statistical learning and deep 
+learning models. Alongside this, logmatic also provides an out-of-the-box GUI toolkit for users to conduct interactive log 
+analysis. With logmatic, we can also easily benchmark popular ML and deep-learning algorithms for log anomaly detection 
+without putting in redundant effort to process the logs. We have opensourced logmatic to facilitate a wide range of 
 applications benefiting both academic research and industrial prototyping. 
  
-The following table compares LogAI with several existing log analysis Tools, include both commercial log management platforms
+The following table compares logmatic with several existing log analysis Tools, include both commercial log management platforms
 like NewRelic and DataDog, or popular log analysis open source tools on Github. 
 
-| Coverage  | LogAI | NewRelic Log Monitoring | DataDog Log Explorer | logparser | loglizer | deep-loglizer | log3C | 
+| Coverage  | logmatic | NewRelic Log Monitoring | DataDog Log Explorer | logparser | loglizer | deep-loglizer | log3C | 
 | ------------- | ------------- | ------------- |  ------------- | ------------- | ------------- | ------------- | ------------- |
 | OpenTelemetry log data model  | :white_check_mark:  | :white_check_mark:  | :white_check_mark:  | | | | | | 
 | Unified data loader and preprocessing | :white_check_mark:  | :white_check_mark:  | :white_check_mark:  | :white_check_mark:  | :white_check_mark:  | :white_check_mark: | |
@@ -70,41 +70,41 @@ like NewRelic and DataDog, or popular log analysis open source tools on Github.
 ## Installation
 
 ### Quick Install
-You can install LogAI core library using `pip install`:
+You can install logmatic core library using `pip install`:
 
 ```shell
 
-# Check out LogAI code repo from Github
-git clone https://github.com/salesforce/logai.git
-cd logai
+# Check out logmatic code repo from Github
+git clone https://github.com/salesforce/logmatic.git
+cd logmatic
 
 # [Optional] Create virtual environment
 python3 -m venv venv
 source venv/bin/activate
 
-# Install LogAI
-pip install logai
+# Install logmatic
+pip install logmatic
 
 ```
 
 ### Install Optional Dependencies
-LogAI core library is light-weight with limited dependent packages installed. Users can install optional dependencies
-to enable extended functionalities of LogAI.
+logmatic core library is light-weight with limited dependent packages installed. Users can install optional dependencies
+to enable extended functionalities of logmatic.
 
 **Deep Learning Log Analysis**. To conduct deep learning model related tasks and run benchmarking,
-please install extra requirements by `pip install "logai[deep-learning]"`.
+please install extra requirements by `pip install "logmatic[deep-learning]"`.
 
-**Enable LogAI GUI Portal***. To use LogAI GUI portal, 
-please install extra requirements by `pip install "logai[gui]"`.
+**Enable logmatic GUI Portal***. To use logmatic GUI portal, 
+please install extra requirements by `pip install "logmatic[gui]"`.
 
-**LogAI Development**. To contribute to LogAI development, build and test code changes, 
-please install extra requirements by `pip install "logai[dev]"`.
+**logmatic Development**. To contribute to logmatic development, build and test code changes, 
+please install extra requirements by `pip install "logmatic[dev]"`.
 
-**Complete Installation**. you can install the full list of dependencies by `pip install "logai[all]"`.
+**Complete Installation**. you can install the full list of dependencies by `pip install "logmatic[all]"`.
 
 ### Known Issues
 
-> :warning: You may see `Resource punkt not found` while using LogAI. You can download `punkt`
+> :warning: You may see `Resource punkt not found` while using logmatic. You can download `punkt`
 > package from NLTK to solve the problem.
 > ```shell
 > python -m nltk.downloader punkt
@@ -112,43 +112,43 @@ please install extra requirements by `pip install "logai[dev]"`.
 
 ## Getting Started
 
-Below we briefly introduce several ways to explore and use LogAI, including exploring LogAI GUI
-portal, benchmarking deep-learning based log anomaly detection using LogAI, and building your 
-own log analysis application with LogAI.
+Below we briefly introduce several ways to explore and use logmatic, including exploring logmatic GUI
+portal, benchmarking deep-learning based log anomaly detection using logmatic, and building your 
+own log analysis application with logmatic.
 
-### Explore LogAI GUI Portal 
+### Explore logmatic GUI Portal 
 
-You can also start a local LogAI service and use the GUI portal to explore LogAI.
+You can also start a local logmatic service and use the GUI portal to explore logmatic.
 
 ```shell
 
-# Check out LogAI code repo from Github
-git clone https://github.com/salesforce/logai.git
-cd logai
+# Check out logmatic code repo from Github
+git clone https://github.com/salesforce/logmatic.git
+cd logmatic
 
 # [Optional] Create virtual environment
 python3 -m venv venv # create virtual environment
 source venv/bin/activate # activate virtual env
 
-# install LogAI and GUI dependencies
+# install logmatic and GUI dependencies
 pip install ".[dev]"
 pip install ".[gui]"
 
-# Start LogAI service
+# Start logmatic service
 export PYTHONPATH='.'  # make sure to add current root to PYTHONPATH
 python3 gui/application.py # Run local plotly dash server.
 ```
 
-Then open the LogAI portal via http://localhost:8050/ or http://127.0.0.1:8050/ in your browser:
+Then open the logmatic portal via http://localhost:8050/ or http://127.0.0.1:8050/ in your browser:
 
-![portal](img/logai_gui_landing.png)
+![portal](img/logmatic_gui_landing.png)
 
 The control panel is on the left side of the page. There are three applications you can choose from:
 Log Summarization, Log Clustering and Anomaly Detection.
 
 #### Control Panel
 
-**File Setting**. You can select the log type and log files to be processed. Now LogAI supports three 
+**File Setting**. You can select the log type and log files to be processed. Now logmatic supports three 
 public datasets: HDFS, BGL and HealthApp. For each log type we included several sample log data. After
 log file selected, you can choose the attributes you want to be involved in log processing. The selected 
 attributes will be treated as structured log attributes.
@@ -165,7 +165,7 @@ Log summarization App summarize and group the raw logs by log patterns and attri
 each log pattern and see what the pattern looks like and the dynamic values in each position. You can also 
 see the chart of occurrance trend of this pattern on the right side.
 
-![log summarization](img/logai_summarization_res.png)
+![log summarization](img/logmatic_summarization_res.png)
 
 #### Log Clustering
 
@@ -174,7 +174,7 @@ Then using clustering algorithms to generate log clusters. In this example, we c
 generate 8 clusters. The result is shown as a pie chart and you can click each portion of the pie chart to check
 the raw logs in this cluster.
 
-![log clustering](img/logai_clustering_res.png)
+![log clustering](img/logmatic_clustering_res.png)
 
 #### Anomaly Detection
 
@@ -188,15 +188,15 @@ anomalous timestamps on the counter vector time-series.
 **Semantic anomaly detection**. If we use unsupervised outlier detection algorithms such as One-class SVM, the raw logs will 
 be converted into semantic vectors and feed the One-class SVM model. Then the model will detect anomalous loglines.
 
-![log anomaly detection](img/logai_anomaly_detection.png)
+![log anomaly detection](img/logmatic_anomaly_detection.png)
 
-LogAI GUI portal is just an example to demo LogAI capabilities. We know this may not be the best way to visualize the 
+logmatic GUI portal is just an example to demo logmatic capabilities. We know this may not be the best way to visualize the 
 results and there might be bugs in how the results are displayed. We will keep working with the open source community
 to improve usability of the portal. Any feedbacks and contributions are welcome :blush:. 
 
 ### Run Simple Time-series Anomaly Detection Application
 
-You can also use LogAI in more programtic ways. LogAI supports configuration files in `.json` or `.yaml`. 
+You can also use logmatic in more programtic ways. logmatic supports configuration files in `.json` or `.yaml`. 
 Below is a sample `log_anomaly_detection_config.json` configuration for anomaly detection application. 
 Make sure to set `filepath` to the target log dataset file path.
 
@@ -237,8 +237,8 @@ Then to run log anomaly detection. You can simply create below python script:
 ```python
 import json
 
-from logai.applications.application_interfaces import WorkFlowConfig
-from logai.applications.log_anomaly_detection import LogAnomalyDetection
+from logmatic.applications.application_interfaces import WorkFlowConfig
+from logmatic.applications.log_anomaly_detection import LogAnomalyDetection
 
 # path to json configuration file
 json_config = "./log_anomaly_detection_config.json"
@@ -260,15 +260,15 @@ Then you can check anomaly detection results by calling `app.anomaly_results`.
 For full context of this example please check
 [Tutorial: Use Log Anomaly Detection Application](./examples/jupyter_notebook/log_anomaly_detection_example.ipynb).
 
-### Build Customized LogAI Applications
-You can build your own customized log analysis applications using LogAI. Here we show two examples:
+### Build Customized logmatic Applications
+You can build your own customized log analysis applications using logmatic. Here we show two examples:
 
-* [Tutorial: Log Clustering Using LogAI](./examples/jupyter_notebook/tutorial_log_clustering.ipynb)
-* [Tutorial: Log Anomaly Detection Using LogAI](./examples/jupyter_notebook/tutorial_log_anomaly_detection.ipynb)
+* [Tutorial: Log Clustering Using logmatic](./examples/jupyter_notebook/tutorial_log_clustering.ipynb)
+* [Tutorial: Log Anomaly Detection Using logmatic](./examples/jupyter_notebook/tutorial_log_anomaly_detection.ipynb)
 
 ### Deep-learning Anomaly Detection Benchmarking
 
-LogAI can be used to benchmark deep-learning anomaly detection results. 
+logmatic can be used to benchmark deep-learning anomaly detection results. 
 A [tutorial](examples/jupyter_notebook/tutorial_deep_ad.md) is provided for 
 Anomaly Detection Benchmarking using LSTM anomaly detector for HDFS Dataset. More examples of deep-learning anomaly 
 detection benchmarking on different datasets and algorithms can be found in 
@@ -276,17 +276,17 @@ detection benchmarking on different datasets and algorithms can be found in
 
 ## Documentation
 
-For more detail about LogAI library and advanced use cases, please visit 
-[LogAI Documentation](https://opensource.salesforce.com/logai).
+For more detail about logmatic library and advanced use cases, please visit 
+[logmatic Documentation](https://opensource.salesforce.com/logmatic).
 
-## Technical Report and Citing LogAI
+## Technical Report and Citing logmatic
 
-You can find more details about LogAI in the [technical report](https://arxiv.org/abs/2301.13415). 
-If you're using LogAI in your research or applications, please cite using this BibTeX:
+You can find more details about logmatic in the [technical report](https://arxiv.org/abs/2301.13415). 
+If you're using logmatic in your research or applications, please cite using this BibTeX:
 
 ```
 @misc{https://doi.org/10.48550/arxiv.2301.13415,
-    title = {LogAI: A Library for Log Analytics and Intelligence},
+    title = {logmatic: A Library for Log Analytics and Intelligence},
     author = {Cheng, Qian and Saha, Amrita and Yang, Wenzhuo and Liu, Chenghao and Sahoo, Doyen and Hoi, Steven},
     publisher = {arXiv},
     year = {2023},
@@ -299,7 +299,7 @@ If you're using LogAI in your research or applications, please cite using this B
 
 ## Contact
 If you have any questions, comments or suggestions, 
-please do not hesitate to contact us at [logai@salesforce.com](logai@salesforce.com). 
+please do not hesitate to contact us at [logmatic@salesforce.com](logmatic@salesforce.com). 
 
 ## License
 [BSD 3-Clause License](LICENSE.txt)
