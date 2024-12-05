@@ -41,8 +41,6 @@ For full license text, see the LICENSE file in the repo root or https://opensour
   * [Deep-learning Anomaly Detection Benchmarking](#deep-learning-anomaly-detection-benchmarking)
 * [Documentation](#documentation)
 * [Technical Report and Citing Logmatic](#technical-report-and-citing-Logmatic)
-* [Contact](#contact)
-* [License](#license)
 
 ## Introduction
 Logmatic is a one-stop open source library for log analytics and intelligence. Logmatic supports various log analytics and log intelligence tasks such as log summarization, log clustering, log anomaly detection and more. It adopts the OpenTelemetry data model, to enable compatibility with different log management platforms. Logmatic provides a unified model interface and integrates popular time-series, statistical learning and deep 
@@ -90,7 +88,7 @@ services:
       - "8050:8050"
 ```
 
-![portal](img/Logmatic_gui_landing.png)
+![portal](img/logmatic_gui_landing.png)
 
 The control panel is on the left side of the page. There are three applications you can choose from:
 Log Summarization, Log Clustering and Anomaly Detection.
@@ -114,7 +112,7 @@ Log summarization App summarize and group the raw logs by log patterns and attri
 each log pattern and see what the pattern looks like and the dynamic values in each position. You can also 
 see the chart of occurrance trend of this pattern on the right side.
 
-![log summarization](img/Logmatic_summarization_res.png)
+![log summarization](img/logmatic_summarization_res.png)
 
 #### Log Clustering
 
@@ -123,7 +121,7 @@ Then using clustering algorithms to generate log clusters. In this example, we c
 generate 8 clusters. The result is shown as a pie chart and you can click each portion of the pie chart to check
 the raw logs in this cluster.
 
-![log clustering](img/Logmatic_clustering_res.png)
+![log clustering](img/logmatic_clustering_res.png)
 
 #### Anomaly Detection
 
@@ -137,7 +135,7 @@ anomalous timestamps on the counter vector time-series.
 **Semantic anomaly detection**. If we use unsupervised outlier detection algorithms such as One-class SVM, the raw logs will 
 be converted into semantic vectors and feed the One-class SVM model. Then the model will detect anomalous loglines.
 
-![log anomaly detection](img/Logmatic_anomaly_detection.png)
+![log anomaly detection](img/logmatic_anomaly_detection.png)
 
 Logmatic GUI portal is just an example to demo Logmatic capabilities. We know this may not be the best way to visualize the 
 results and there might be bugs in how the results are displayed. We will keep working with the open source community
@@ -222,15 +220,5 @@ A [tutorial](examples/jupyter_notebook/tutorial_deep_ad.md) is provided for
 Anomaly Detection Benchmarking using LSTM anomaly detector for HDFS Dataset. More examples of deep-learning anomaly 
 detection benchmarking on different datasets and algorithms can be found in 
 [Deep Anomaly Detection Benchmarking Examples](examples/jupyter_notebook/nn_ad_benchmarking).
-
-## Documentation
-
-For more detail about Logmatic library and advanced use cases, please visit 
-[Logmatic Documentation](https://opensource.salesforce.com/Logmatic).
-
-## Technical Report and Citing Logmatic
-
-You can find more details about Logmatic in the [technical report](https://arxiv.org/abs/2301.13415). 
-If you're using Logmatic in your research or applications, please cite using this BibTeX:
 
 
