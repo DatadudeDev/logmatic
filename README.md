@@ -89,7 +89,7 @@ services:
 ```
 
 
-### Features
+## Features
 
 
 ![portal](img/logmatic_gui_landing.png)
