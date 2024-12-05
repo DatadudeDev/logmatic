@@ -70,76 +70,26 @@ like NewRelic and DataDog, or popular log analysis open source tools on Github.
 ## Installation
 
 ### Quick Install
-You can install Logmatic core library using `pip install`:
+You can install logmatic using the Docker image: 
 
-```shell
-
-# Check out Logmatic code repo from Github
-git clone https://github.com/salesforce/Logmatic.git
-cd Logmatic
-
-# [Optional] Create virtual environment
-python3 -m venv venv
-source venv/bin/activate
-
-# Install Logmatic
-pip install Logmatic
+```
+docker run -d -p 8050:8050 --name logmatic docker.io/datadudedev/logmatic:latest
 
 ```
 
-### Install Optional Dependencies
-Logmatic core library is light-weight with limited dependent packages installed. Users can install optional dependencies
-to enable extended functionalities of Logmatic.
 
-**Deep Learning Log Analysis**. To conduct deep learning model related tasks and run benchmarking,
-please install extra requirements by `pip install "Logmatic[deep-learning]"`.
+If you prefer Docker Compose: 
 
-**Enable Logmatic GUI Portal***. To use Logmatic GUI portal, 
-please install extra requirements by `pip install "Logmatic[gui]"`.
-
-**Logmatic Development**. To contribute to Logmatic development, build and test code changes, 
-please install extra requirements by `pip install "Logmatic[dev]"`.
-
-**Complete Installation**. you can install the full list of dependencies by `pip install "Logmatic[all]"`.
-
-### Known Issues
-
-> :warning: You may see `Resource punkt not found` while using Logmatic. You can download `punkt`
-> package from NLTK to solve the problem.
-> ```shell
-> python -m nltk.downloader punkt
-> ```
-
-## Getting Started
-
-Below we briefly introduce several ways to explore and use Logmatic, including exploring Logmatic GUI
-portal, benchmarking deep-learning based log anomaly detection using Logmatic, and building your 
-own log analysis application with Logmatic.
-
-### Explore Logmatic GUI Portal 
-
-You can also start a local Logmatic service and use the GUI portal to explore Logmatic.
-
-```shell
-
-# Check out Logmatic code repo from Github
-git clone https://github.com/salesforce/Logmatic.git
-cd Logmatic
-
-# [Optional] Create virtual environment
-python3 -m venv venv # create virtual environment
-source venv/bin/activate # activate virtual env
-
-# install Logmatic and GUI dependencies
-pip install ".[dev]"
-pip install ".[gui]"
-
-# Start Logmatic service
-export PYTHONPATH='.'  # make sure to add current root to PYTHONPATH
-python3 gui/application.py # Run local plotly dash server.
 ```
+version: '3.8'
 
-Then open the Logmatic portal via http://localhost:8050/ or http://127.0.0.1:8050/ in your browser:
+services:
+  logai:
+    image: docker.io/datadudedev/logai:latest
+    container_name: logai_container
+    ports:
+      - "8050:8050"
+```
 
 ![portal](img/Logmatic_gui_landing.png)
 
@@ -284,23 +234,4 @@ For more detail about Logmatic library and advanced use cases, please visit
 You can find more details about Logmatic in the [technical report](https://arxiv.org/abs/2301.13415). 
 If you're using Logmatic in your research or applications, please cite using this BibTeX:
 
-```
-@misc{https://doi.org/10.48550/arxiv.2301.13415,
-    title = {Logmatic: A Library for Log Analytics and Intelligence},
-    author = {Cheng, Qian and Saha, Amrita and Yang, Wenzhuo and Liu, Chenghao and Sahoo, Doyen and Hoi, Steven},
-    publisher = {arXiv},
-    year = {2023},
-    doi = {10.48550/ARXIV.2301.13415},
-    url = {https://arxiv.org/abs/2301.13415},
-    copyright = {arXiv.org perpetual, non-exclusive license}
-}
-
-```
-
-## Contact
-If you have any questions, comments or suggestions, 
-please do not hesitate to contact us at [Logmatic@salesforce.com](Logmatic@salesforce.com). 
-
-## License
-[BSD 3-Clause License](LICENSE.txt)
 
