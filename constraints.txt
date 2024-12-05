@@ -1,4 +1,0 @@
-numpy==1.23.5
-cython==0.29.36
-scipy==1.10.1
-statsmodels==0.14.2
