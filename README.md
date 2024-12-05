@@ -8,7 +8,7 @@ For full license text, see the LICENSE file in the repo root or https://opensour
 
 <p align="center">
     <br>
-    <img src="./img/banner-Logmatic.png" width="1200"/>
+    <img src="./img/banner-logmatic.png" width="1200"/>
     </br>
 </p>
 
