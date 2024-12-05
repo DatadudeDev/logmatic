@@ -1,3 +1,11 @@
+<!--
+Copyright (c) 2023 Salesforce.com, inc.
+All rights reserved.
+SPDX-License-Identifier: BSD-3-Clause
+For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+-->
+
 <p align="center">
     <br>
     <img src="./img/logai_logo.jpg" width="400"/>
@@ -61,32 +69,6 @@ like NewRelic and DataDog, or popular log analysis open source tools on Github.
 
 ## Installation
 
-@Datadudedev compiled the dependanceies into a discrete container for a one-click deployment of an otherwise challenging install. This is a developer build, not an offical image. 
-
-### Docker
-You can install the full LogAI server with docker using:
-
-```
-docker run -d -p 8050:8050 --name logai_container docker.io/datadudedev/logai:latest
-```
-Check out the Docker Image [Here](https://hub.docker.com/repository/docker/datadudedev/logai)
-
-### Docker Compose
-If you prefer a more paginated approach: 
-
-```
-version: '3.8'
-
-services:
-  logai:
-    image: docker.io/datadudedev/logai:latest
-    container_name: logai_container
-    ports:
-      - "8050:8050"
-```
-
-
-
 ### Quick Install
 You can install LogAI core library using `pip install`:
 
@@ -101,16 +83,63 @@ python3 -m venv venv
 source venv/bin/activate
 
 # Install LogAI
-pip install -r requirements.txt
-python -m nltk.downloader punkt
+pip install logai
 
-# Run the plotly dash server: 
-python -m gui.application
+```
+
+### Install Optional Dependencies
+LogAI core library is light-weight with limited dependent packages installed. Users can install optional dependencies
+to enable extended functionalities of LogAI.
+
+**Deep Learning Log Analysis**. To conduct deep learning model related tasks and run benchmarking,
+please install extra requirements by `pip install "logai[deep-learning]"`.
+
+**Enable LogAI GUI Portal***. To use LogAI GUI portal, 
+please install extra requirements by `pip install "logai[gui]"`.
+
+**LogAI Development**. To contribute to LogAI development, build and test code changes, 
+please install extra requirements by `pip install "logai[dev]"`.
+
+**Complete Installation**. you can install the full list of dependencies by `pip install "logai[all]"`.
+
+### Known Issues
+
+> :warning: You may see `Resource punkt not found` while using LogAI. You can download `punkt`
+> package from NLTK to solve the problem.
+> ```shell
+> python -m nltk.downloader punkt
+> ```
+
+## Getting Started
+
+Below we briefly introduce several ways to explore and use LogAI, including exploring LogAI GUI
+portal, benchmarking deep-learning based log anomaly detection using LogAI, and building your 
+own log analysis application with LogAI.
+
+### Explore LogAI GUI Portal 
+
+You can also start a local LogAI service and use the GUI portal to explore LogAI.
+
+```shell
+
+# Check out LogAI code repo from Github
+git clone https://github.com/salesforce/logai.git
+cd logai
+
+# [Optional] Create virtual environment
+python3 -m venv venv # create virtual environment
+source venv/bin/activate # activate virtual env
+
+# install LogAI and GUI dependencies
+pip install ".[dev]"
+pip install ".[gui]"
+
+# Start LogAI service
+export PYTHONPATH='.'  # make sure to add current root to PYTHONPATH
+python3 gui/application.py # Run local plotly dash server.
 ```
 
 Then open the LogAI portal via http://localhost:8050/ or http://127.0.0.1:8050/ in your browser:
-
-
 
 ![portal](img/logai_gui_landing.png)
 
@@ -249,4 +278,29 @@ detection benchmarking on different datasets and algorithms can be found in
 
 For more detail about LogAI library and advanced use cases, please visit 
 [LogAI Documentation](https://opensource.salesforce.com/logai).
-# logmatic
+
+## Technical Report and Citing LogAI
+
+You can find more details about LogAI in the [technical report](https://arxiv.org/abs/2301.13415). 
+If you're using LogAI in your research or applications, please cite using this BibTeX:
+
+```
+@misc{https://doi.org/10.48550/arxiv.2301.13415,
+    title = {LogAI: A Library for Log Analytics and Intelligence},
+    author = {Cheng, Qian and Saha, Amrita and Yang, Wenzhuo and Liu, Chenghao and Sahoo, Doyen and Hoi, Steven},
+    publisher = {arXiv},
+    year = {2023},
+    doi = {10.48550/ARXIV.2301.13415},
+    url = {https://arxiv.org/abs/2301.13415},
+    copyright = {arXiv.org perpetual, non-exclusive license}
+}
+
+```
+
+## Contact
+If you have any questions, comments or suggestions, 
+please do not hesitate to contact us at [logai@salesforce.com](logai@salesforce.com). 
+
+## License
+[BSD 3-Clause License](LICENSE.txt)
+
