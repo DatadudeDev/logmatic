@@ -14,7 +14,7 @@ For full license text, see the LICENSE file in the repo root or https://opensour
 
 <div align="center">
   <a href="https://github.com/datadudedev/Logmatic/actions/workflows/tests.yml">
-    <img alt="Latest Release" src="https://github.com/salesforce/Logmatic/actions/workflows/tests.yml/badge.svg?branch=main" />
+    <img alt="Latest Release" src="https://github.com/datadudedev/Logmatic/actions/workflows/tests.yml/badge.svg?branch=main" />
   </a>
   <a href="[https://github.com/DatadudeDev/logmatic/actions/workflows/docker-image.yml]">
     <img alt="pages-build-deployment" src="https://github.com/salesforce/Logmatic/actions/workflows/pages/pages-build-deployment/badge.svg" />
