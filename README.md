@@ -88,6 +88,10 @@ services:
       - "8050:8050"
 ```
 
+
+### Features
+
+
 ![portal](img/logmatic_gui_landing.png)
 
 The control panel is on the left side of the page. There are three applications you can choose from:
