@@ -8,18 +8,18 @@ For full license text, see the LICENSE file in the repo root or https://opensour
 
 <p align="center">
     <br>
-    <img src="./img/logai_logo.jpg" width="400"/>
+    <img src="./img/banner-logmatic.png" width="400"/>
     </br>
 </p>
 
 <div align="center">
-  <a href="https://github.com/salesforce/logai/actions/workflows/tests.yml">
+  <a href="https://github.com/datadudedev/logai/actions/workflows/tests.yml">
     <img alt="Latest Release" src="https://github.com/salesforce/logai/actions/workflows/tests.yml/badge.svg?branch=main" />
   </a>
-  <a href="https://github.com/salesforce/logai/actions/workflows/pages/pages-build-deployment">
+  <a href="https://github.com/datadudedev/logai/actions/workflows/pages/pages-build-deployment">
     <img alt="pages-build-deployment" src="https://github.com/salesforce/logai/actions/workflows/pages/pages-build-deployment/badge.svg" />
   </a>
-  <a href="https://github.com/salesforce/logai/releases">
+  <a href="https://github.com/datadudedev/logai/releases">
     <img alt="Latest Release" src="https://img.shields.io/github/release/salesforce/logai.svg" />
   </a>
   <a href="https://badge.fury.io/py/logai">
