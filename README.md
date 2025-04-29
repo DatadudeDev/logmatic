@@ -1,4 +1,4 @@
-<!--
+[<!--
 Copyright (c) 2023 Salesforce.com, inc.
 All rights reserved.
 SPDX-License-Identifier: BSD-3-Clause
@@ -226,3 +226,4 @@ detection benchmarking on different datasets and algorithms can be found in
 [Deep Anomaly Detection Benchmarking Examples](examples/jupyter_notebook/nn_ad_benchmarking).
 
 
+](https://github.com/DatadudeDev/logmatic)
